@@ -29,7 +29,7 @@ x = delta_x / delta
 y = delta_y / delta
 z = delta_z / delta
 
-# Округлення
+# Округлення вартості
 x = round(x, 2)
 y = round(y, 2)
 z = round(z, 2)
