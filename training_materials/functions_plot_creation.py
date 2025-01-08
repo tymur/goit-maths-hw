@@ -9,7 +9,7 @@ fig, ax = plt.subplots()
 ax.spines[["left", "bottom"]].set_position(("data", 0))
 
 
-# Сховати верхню та праву лінію
+# Сховаємо верхню та праву лінію
 ax.spines[["top", "right"]].set_visible(False)
 
 
@@ -19,16 +19,16 @@ ax.plot(1, 0, ">k", transform=ax.get_yaxis_transform(), clip_on=False)
 ax.plot(0, 1, "^k", transform=ax.get_xaxis_transform(), clip_on=False)
 
 
+# Сформуємо ряд значень x. 100 елементів від -10 до 10
+x = np.linspace(-20, 20., 100)
+
+
 # Додамо проміжні лінії
 ax.grid(True, linestyle='-.')
 
 
-# Сформуємо ряд значень x. 100 елементів від -5 до 5
-x = np.linspace(-5, 5, 100, False)
-
-
-# Функціональну залежність
-ax.plot(x, 1 / (x**2 + 2*x + 3))
+# Сформуємо функцію y = x**2+2
+ax.plot(x, x**2+2)
 
 
 # Запускаємо малювання графіка

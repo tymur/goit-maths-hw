@@ -1,3 +1,4 @@
+from math import sin
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -23,13 +24,43 @@ ax.plot(0, 1, "^k", transform=ax.get_xaxis_transform(), clip_on=False)
 ax.grid(True, linestyle='-.')
 
 
-# Сформуємо ряд значень x. 100 елементів від -5 до 5
+# Сформуємо ряд значень x. 100 елементів від 5 до 15
 x = np.linspace(-5, 5, 100, False)
 
 
 # Функціональну залежність
 ax.plot(x, 1 / (x**2 + 2*x + 3))
 
+# Запускаємо малювання графіка
+plt.show()
+
+ax.plot(x, 1 / (x**2 - 2*x + 3))
 
 # Запускаємо малювання графіка
 plt.show()
+
+ax.plot(x, np.sin(x) + 2)
+
+# Запускаємо малювання графіка
+plt.show()
+
+ax.plot(x, np.sin(x) + (-1))
+
+# Запускаємо малювання графіка
+plt.show()
+
+ax.plot(x, -x**2)
+
+# Запускаємо малювання графіка
+plt.show()
+
+x = np.linspace(-1, 10, 500)
+ax.plot(x, np.sqrt(x + 1))
+
+# Запускаємо малювання графіка
+plt.show()
+
+ax.plot(x, 6 / (x - 3))  
+
+# Запускаємо малювання графіка
+plt.show() 
