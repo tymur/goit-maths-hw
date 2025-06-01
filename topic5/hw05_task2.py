@@ -2,7 +2,7 @@ import sympy as sp
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Аналітична частина
+# Аналітична частина (оголошуємо змінну, визначаємо функцію та діференціюємо її)
 x = sp.symbols('x')
 f = -3 * x**2 + 30 * x
 f_prime = sp.diff(f, x)
@@ -32,4 +32,5 @@ plt.axhline(0, color='black', linewidth=0.5)
 plt.axvline(float(maximum_point), color='red', linestyle=':')
 plt.show()
 
-maximum_point, y_max, f_prime
+print(maximum_point, y_max, f_prime) 
+
